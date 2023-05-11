@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
 header {
     width: 100%;
-    height: 120vh;
+    height: 130vh;
     padding-top: 10rem;
     overflow: hidden;
 }
@@ -94,18 +94,18 @@ header {
     height: 2rem;
     background: var(--color-btn);
 }
-.place-holder > h1 {
+.header-place-holder > h1 {
     font-family: 'Londrina Outline', cursive;
     font-weight: 400;
     font-size: 5rem;
     visibility: hidden;
 }
-.dark .place-holder > h1 {
+.dark .header-place-holder > h1 {
     color: var(--color-light);
     visibility: visible;
     opacity: 0.5;
 }
-.place-holder {
+.header-place-holder {
     position: absolute;
     text-align: left;
 }
@@ -116,6 +116,9 @@ header {
 
 /* media query (medium devices)*/
 @media screen and (max-width: 1024px) {
+    header {
+        height: 96vh;
+    }
     .container {
         width: var(--container-width-md);
     }
@@ -138,7 +141,7 @@ header {
     .header__socials{
         bottom: 2rem;
     }
-    .place-holder {
+    .header-place-holder {
         right: 40rem;
     }
 }
@@ -147,6 +150,9 @@ header {
 
 /* media query (small devices)*/
 @media screen and (max-width: 600px) {
+    header {
+        height: 120vh;
+    }
     .container {
         width: var(--container-width-sm);
     }

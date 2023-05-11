@@ -16,7 +16,7 @@ const Header = (props) => {
                 <p>I am a full-stack developer based in Toronto, Canada.
                   I have a passion for web development and love to create for web and mobile devices.</p>
                   <CTA />
-                <div className="place-holder">
+                <div className="header-place-holder">
                     <h1>
                         O
                         <br/>
@@ -33,6 +33,7 @@ const Header = (props) => {
                 <HeaderSocials />
             </div>
         </div>
+        
     </header>
   )
 }
