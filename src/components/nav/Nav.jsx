@@ -21,12 +21,12 @@ const Header = (props) => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
   function toggleMenu(){
-    setShowMenu(!showMenu);
+    setShowMenu(showMenu => !showMenu);
    }
 
   return (
    <div className={props.darkMode ? "dark" : ''}>
-      <nav className={`${props.darkMode ? "dark" : ''} ${showMenu ? 'mobile-menu' : 'mobile-menu-icon'}`}>
+      <nav className={`${props.darkMode ? "dark" : ''} ${showMenu ? 'mobile-menu-icon' : 'mobile-menu'}`}>
         <a href="#" className='logo'>
           <img src={props.darkMode ? Logo1 : Logo2} alt="Logo"/>
         </a>
@@ -67,11 +67,6 @@ const Header = (props) => {
 
             <a href="#" className='theme-icon' onClick={props.toggleDarkMode}>{props.darkMode ? <FiSun /> : <MdOutlineNightlight /> }</a>
             <hr/>
-
-            {/* <a href="#" 
-              onClick={()=> setShowMenu(!showMenu)}>
-              {showMenu ? <RxHamburgerMenu className='icon' /> : <ImCancelCircle className='icon'/>}
-            </a> */}
       </nav>
       <a href={"#activeNav"} onClick={toggleMenu}>
       {<RxHamburgerMenu className='icon'/>}

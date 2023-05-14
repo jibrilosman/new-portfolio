@@ -82,7 +82,7 @@ a:nth-child(3) nav a:focus::after{
   font-size: 2.5rem;
   color: var(--color-bg-variant);
 }
-.mobile-menu {
+/* .mobile-menu {
   display: none;
   flex-direction: column;
   position: absolute;
@@ -92,7 +92,7 @@ a:nth-child(3) nav a:focus::after{
   background-color: #fff;
   padding: 1rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
+} */
 .theme-icon {
   margin-top: 6px;
 }
@@ -111,10 +111,22 @@ hr {
 
 /* media query (small devices)*/
 @media screen and (max-width: 600px) {
+ 
   .dark nav {
     background: rgba(21, 25, 60, 1);
     box-shadow: var(--dark-shadow);
   }
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 50%;
+    transition: all 1.5s ease;
+    transform: translateX(-50%);
+  }
+  
   .mobile-menu-icon {
       display: flex;
       flex-direction: column;
@@ -126,16 +138,7 @@ hr {
       transform: translateX(-50%);
       transition: all 1.5s ease;
     }
-    .mobile-menu {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      top: 0;
-      left: 50%;
-      transition: all 1.5s ease;
-      transform: translateX(-50%);
-}
+    
   .icon {
       display: block;
       position: absolute;
@@ -145,7 +148,11 @@ hr {
       color: var(--color-white);
       background: var(--color-primary-variant);
       border-radius: 3px;
-      box-shadow: var(--light-shadow);
+      box-shadow: var(--light-shadow);  
+  }
+  .icon:hover {
+     transform: translateY(-2px);
+      transition: all 0.3s ease-in-out;
   }
   hr {
     display: block;

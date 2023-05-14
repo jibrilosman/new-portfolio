@@ -1,3 +1,6 @@
+#about {
+  height: 112vh;
+}
 .container {
   width: var(--container-width-lg);
   margin: 0 auto;
@@ -56,6 +59,9 @@
   height: 25px;
   background-color: var(--color-btn);
 }
+.dark .about-info h2::after {
+  background: #f71735;
+}
 .about-info h5 {
   font-size: 1.1rem;
   font-weight: 400;
@@ -107,6 +113,7 @@
 
 /* media query (medium devices)*/
 @media screen and (max-width: 1024px) {
+    
     .about-container{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
@@ -127,7 +134,9 @@
 
 /* media query (small devices)*/
 @media screen and (max-width: 600px) {
-    
+  #about {
+    height: 160vh;
+  }
     .about-place-holder h1{
         top: -100px;
         left: 8px;

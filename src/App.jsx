@@ -3,6 +3,7 @@ import Nav from './components/nav/Nav'
 import Footer from './components/footer/Footer'
 import About from './components/about/About'
 import Header from './components/header/Header'
+import Services from './components/services/Services'
 
 
 const App = () => {
@@ -14,9 +15,10 @@ const App = () => {
     
   return (
     <>
-      <Header darkMode={darkMode}/>
+      <Header darkMode={darkMode} />
       <Nav darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <About darkMode={darkMode}  />
+      <Services darkMode={darkMode} />
       <Footer darkMode={darkMode}/>
     </>
   )

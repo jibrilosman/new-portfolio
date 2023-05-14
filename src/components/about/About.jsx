@@ -6,9 +6,7 @@ import Image from '../../assets/hero-4.jpg'
 const About = (props) => {
   return (
     <section id='about' className={props.darkMode ? "dark" : ''}>
-      <br />
-      <br />
-      <br />
+      
       <div className="container about-container">
         <div className="about-me">
           <div className="about-me-image">

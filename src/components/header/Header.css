@@ -55,6 +55,11 @@ header {
     border-radius: 12rem 0 0 0;
     animation: spin 140s linear infinite;
 }
+.dark .hero-image::before {
+    border: 20px solid #f71735;
+    border-right: 0;
+    border-bottom: 0;
+}
 .hero-image {
     width: 100%;
     aspect-ratio: 1/1;
@@ -151,7 +156,7 @@ header {
 /* media query (small devices)*/
 @media screen and (max-width: 600px) {
     header {
-        height: 120vh;
+        height: 140vh;
     }
     .container {
         width: var(--container-width-sm);

@@ -80,8 +80,14 @@ body {
     transform: translateY(-2px);
 }
 .dark .btn:hover {
-    background: var(--color-btn);
+    background: #f71735;
     color: var(--color-white);
     border-color: transparent;
     transform: translateY(-2px);
 }
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+

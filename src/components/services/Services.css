@@ -1,0 +1,129 @@
+#services {
+    height: 112vh;
+}
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+.services-place-holder {
+    position: relative;
+}
+.services-place-holder h1{
+    width: 100%;
+    text-align: center;
+    font-family: 'Londrina Outline', cursive;
+    font-weight: 400;
+    font-size: 9rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    letter-spacing: 2rem;
+}
+.dark .services-place-holder h1{
+    opacity: 0.1;
+}
+.service-box {
+    background: var(--clr-white);
+    padding: 2.4rem 3rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    height: 100%;
+    transition: var(--transition);
+    box-shadow: var(--light-shadow);
+    text-align: center;
+    cursor: pointer;
+}
+    .service-box h3 {
+        font-size: var(--color-bg1);
+        font-weight: 600;
+    }
+    .service-box p {
+        font-size: 15px;
+        color: rgba(41, 41, 41, 0.8);
+    }
+.service-box:hover {
+    border: 3px solid  #ea4020;
+    box-shadow: var(--dark-shadow);
+}
+.dark .service-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 0.5px solid #e2e8f0;
+    box-shadow: var(--dark-shadow);
+}
+.dark .service-box:hover {
+    background: var(--color-bg1);
+    border: 3px solid #f71735;
+    transition: all 0.3s ease-in-out;
+}    
+.dark .service-box h3 {
+    color: var(--clr-white);
+}
+.dark .service-box p {
+    color: rgba(255, 255, 255, 0.8);
+}
+.service-icon {
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -60px;
+}
+.service-icon svg {
+    font-size: 25px;
+    position: relative;
+    z-index: 1;
+}
+.hexagon {
+    color: white;
+    width: 80px;
+    height: 46px;
+    background: #ea4020;
+    position: relative;
+  }
+  
+  .hexagon:before, .hexagon:after{
+    box-sizing: border-box;
+    content: '';
+    width: 80px;
+    height: 46px;
+    position: absolute;
+    background: #ea4020;
+    z-index:0;
+  }
+  .dark .hexagon:before, .dark .hexagon:after, .hexagon {
+    background: #f71735;
+  }
+  .hexagon:before {
+    transform: rotate(60deg);
+  }
+  .hexagon:after {
+    transform: rotate(-60deg);
+  }
+
+  /* media query for mediun devicec */
+  @media screen and (max-width: 1024px) {
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+    
+}
+/* media query for small devicec */
+@media screen and (max-width: 600px) {
+    #services {
+        height: 120vh;
+    }
+   
+    .services-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3rem;
+        }
+        .services-place-holder h1{
+            bottom: 50px;
+            font-size: 2.5rem;
+            letter-spacing: 1.5rem;
+        }
+  }
